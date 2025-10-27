@@ -1,4 +1,28 @@
+# Camera Module Code Notice
 
+This folder contains firmware adapted from an **open-source project** to provide camera functionality for the indoor surveillance drone.
+
+---
+
+## ⚠️ Disclaimer
+
+The source code in this folder is **based on or modified from** the following open-source repository:
+
+[ESP32-CAM_MJPEG2SD by s60sc](https://github.com/s60sc/ESP32-CAM_MJPEG2SD)
+
+All credit for the original implementation belongs to the original author(s) of that repository.  
+This code may have been **modified** to suit the integration needs of this project (e.g., for use with the Seeed Studio XIAO ESP32S3, different pin mappings, or simplified configuration).
+
+---
+
+## License Notice
+
+The original repository is licensed under its respective open-source license.  
+Please refer to that project’s license terms before redistribution or commercial use.
+
+Any changes or adaptations made in this folder are clearly documented in comments within the source code.
+
+---
 # ESP32-CAM_MJPEG2SD
 
 ### ***Not yet compatible with latest arduino-esp32 core v3.3.0 as espressif have changed the jpeg decoder - issue [#628](https://github.com/s60sc/ESP32-CAM_MJPEG2SD/issues/628), use v3.2.1***
