@@ -42,6 +42,35 @@ Key capabilities include:
 
 ---
 
+## Program Folders
+
+This repository contains two main types of program folders, organized to make it clear which code is used for the **final demonstration** and which is for **prototyping or experiments**.
+
+### `/src/` – Final Implemented Programs 
+
+- Contains the **final versions** of the code used for demonstration.
+- Each program is independent and can be uploaded separately to the XIAO ESP32S3.
+- Subfolders:
+  
+/motor_control/wifi_controls.ino     → Controls drone motors and movement  
+/camera_module/ESP32-CAM_MJPEG2SD.ino     → Handles camera functions and Wi-Fi streaming  
+/sensor_module/combined_gyro_baro_pcb.ino       → Reads BMP280 + MPU6050 and serves web dashboard
+- **Recommended for:** anyone testing or running the drone for the successfully achieved functionalities.  
+- **Note:** The `camera_module` code is adapted from an open-source project ([ESP32-CAM_MJPEG2SD](https://github.com/s60sc/ESP32-CAM_MJPEG2SD)). See the `README.md` in that folder for proper attribution.
+
+---
+
+### `/prototype/` – Experimental and Prototype Code
+
+- Contains **older, test, or experimental versions** of programs.
+- Organized by purpose, phase, or subsystem. Example structure:
+
+/individual_tests/→ initial motor, and sensor experiments   
+/combined_versions/ → integrated tests before final firmware  
+/superseded/ → older code no longer in use *(i.e for components no longer utilised in final design)*
+
+---
+
 ## Setup and Installation
 
 ### Hardware Setup
@@ -88,10 +117,6 @@ Key capabilities include:
 ### Flashing programs
 
 1. **Select which functionality to upload.**
-Inside the repository, there are three independent Arduino sketches (.ino files):
-/motor_control/wifi_controls.ino     → Controls drone motors and movement  
-/camera_module/ESP32-CAM_MJPEG2SD.ino     → Handles camera functions and Wi-Fi streaming  
-/sensor_module/combined_gyro_baro_pcb.ino       → Reads BMP280 + MPU6050 and serves web dashboard
    - Open the desired .ino file in Arduino IDE depending on which subsystem you want to test or run.
    - Each file should be uploaded separately to the ESP dev board as a standalone program.
 
